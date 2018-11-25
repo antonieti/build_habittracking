@@ -30,4 +30,4 @@ cd $PROJ_ROOT/entities
 mvn clean install && cp ./target/habittrackingentities-1.0-SNAPSHOT.jar /home/${USER}/.m2/local_repo
 
 cd $PROJ_ROOT/repository
-mvn clean install && cp ./target/habittrackingentities-1.0-SNAPSHOT.jar /home/${USER}/.m2/local_repo
+mvn clean install && cp ./target/habittrackingrepository-1.0-SNAPSHOT.jar /home/${USER}/.m2/local_repo
