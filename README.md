@@ -1,6 +1,6 @@
-#Habit Tracker App
+# Habit Tracker App
 
-##Guia de Preparação do ambiente
+## Guia de Preparação do ambiente
 
 1. Dê permissão de execução para o script *build.sh*
 
