@@ -18,9 +18,16 @@ fi
 mkdir -p $PROJ_ROOT;
 mkdir -p $REPO;
 
-echo -e "${BOLD}[${PURPLE}INFO${NC}] Clonando repositórios...\n\n"
-git clone https://github.com/antonieti/habit-tracking-entities.git $PROJ_ROOT/entities
+echo -e "${BOLD}[${PURPLE}INFO${NC}] CLONANDO REPOSITÓRIOS...\n\n"
 
-echo -e "${BOLD}[${PURPLE}INFO${NC}] Gerando JARs das bibliotecas e dependências...\n\n"
+echo -e "${BOLD}[${PURPLE}INFO${NC}] Clonando repositório de ENTIDADES...\n"
+git clone https://github.com/antonieti/habit-tracking-entities.git $PROJ_ROOT/entities
+echo -e "\n\n${BOLD}[${PURPLE}INFO${NC}] Clonando repositório de REPOSITÓRIOS...\n"
+git clone https://github.com/antonieti/habit-tracking-repository.git $PROJ_ROOT/repository
+
+echo -e "\n\n${BOLD}[${PURPLE}INFO${NC}] Gerando JARs das bibliotecas e dependências...\n\n"
 cd $PROJ_ROOT/entities
+mvn clean install && cp ./target/habittrackingentities-1.0-SNAPSHOT.jar /home/${USER}/.m2/local_repo
+
+cd $PROJ_ROOT/repository
 mvn clean install && cp ./target/habittrackingentities-1.0-SNAPSHOT.jar /home/${USER}/.m2/local_repo
