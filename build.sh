@@ -24,4 +24,3 @@ git clone https://github.com/antonieti/habit-tracking-entities.git $PROJ_ROOT/en
 echo -e "${BOLD}[${PURPLE}INFO${NC}] Gerando JARs das bibliotecas e dependências...\n\n"
 cd $PROJ_ROOT/entities
 mvn clean install && cp ./target/habittrackingentities-1.0-SNAPSHOT.jar /home/${USER}/.m2/local_repo
-
